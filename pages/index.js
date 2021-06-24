@@ -10,6 +10,7 @@ export default function Home() {
  
       {/* Header */}
       <Header/>
+      
       <main>
         {/* Sidebar */}
         {/* Feed */}
