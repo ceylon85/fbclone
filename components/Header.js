@@ -60,10 +60,10 @@ function Header() {
           width="40"
           height="40"
           layout="fixed"
-          alt="logout"
+          alt="logout_img"
         />
 
-        <p className="pr-3 font-semibold whitespace-nowrap">sj1230</p>
+        <p className="pr-3 font-semibold whitespace-nowrap">{session.user.name}</p>
         <ViewGridIcon className="icon" />
         <ChatIcon className="icon" />
         <BellIcon className="icon" />
