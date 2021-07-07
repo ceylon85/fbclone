@@ -4,7 +4,9 @@ module.exports = {
       "links.papareact.com",
       "platform-lookaside.fbsbx.com",
       "firebasestorage.googleapis.com",
-      "scontent-gmp1-1.xx.fbcdn.net"
+      "scontent-gmp1-1.xx.fbcdn.net",
+      "upload.wikimedia.org",
+      "www.mappingthejourney.com"
     ],
   },
 };
