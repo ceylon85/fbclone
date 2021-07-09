@@ -1,8 +1,8 @@
 import { useSession } from "next-auth/client";
 import {
   ChevronDownIcon,
-  ShoppingBagIcon,
   UserGroupIcon,
+  BriefcaseIcon,
 } from "@heroicons/react/outline";
 
 import {
@@ -18,13 +18,13 @@ function Sidebar() {
   return (
     <div className="p-2 mt-5 max-w-[600px] xl:min-w-[300px]">
       <SidebarRow src={session.user.image} title={session.user.name} />
-      <SidebarRow Icon={UsersIcon} title="Friends" />
-      <SidebarRow Icon={UserGroupIcon} title="Groups" />
-      <SidebarRow Icon={ShoppingBagIcon} title="Marketplace" />
+      <SidebarRow Icon={UsersIcon} title="친구 찾기" />
+      <SidebarRow Icon={UserGroupIcon} title="그룹" />
       <SidebarRow Icon={DesktopComputerIcon} title="Watch" />
-      <SidebarRow Icon={CalendarIcon} title="Events" />
-      <SidebarRow Icon={ClockIcon} title="Memories" />
-      <SidebarRow Icon={ChevronDownIcon} title="See More" />
+      <SidebarRow Icon={CalendarIcon} title="이벤트" />
+      <SidebarRow Icon={ClockIcon} title="과거의 오늘" />
+      <SidebarRow Icon={BriefcaseIcon} title="채용 정보" />
+      <SidebarRow Icon={ChevronDownIcon} title="더 보기" />
     </div>
   );
 }
