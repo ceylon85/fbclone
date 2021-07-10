@@ -2,11 +2,27 @@ import { useSession } from "next-auth/client";
 import Image from "next/image";
 import { EmojiHappyIcon, PhotographIcon } from "@heroicons/react/outline";
 import { VideoCameraIcon } from "@heroicons/react/solid";
+import { useRef } from "react";
+import {db} from '../firebase'
+import firebase from 'firebase';
 
 function InputBox() {
   const [session] = useSession();
+  const inputRef = useRef(null);
+
   const sendPost = (e) => {
     e.preventDefault();
+
+    if (!inputRef.current.value) return;
+
+    db.collection('posts').add({
+        message: inputRef.current.value,
+        name: session.user.name,
+        email: session.user.email,
+        image: session.user.image,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    })
+    inputRef.current.value = "";
   };
   return (
     <div className="p-2 mt-6 font-medium bg-white shadow-md text-gray-1000 rounded-2xl">
@@ -23,6 +39,7 @@ function InputBox() {
           <input
             className="flex-grow h-12 px-5 bg-gray-100 rounded-full focus:outline-none"
             type="text"
+            ref={inputRef}
             placeholder={`${session.user.name}님, 무슨 생각을 하고 계신가요?`}
           />
           <button hidden type="submit" onClick={sendPost}>
