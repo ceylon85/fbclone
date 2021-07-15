@@ -1,4 +1,5 @@
 import Image from "next/image";
+import {ChatAltIcon, ShareIcon, ThumbUpIcon} from '@heroicons/react/outline'
 
 function Post({ name, message, email, postImage, image, timestamp }) {
   return (
@@ -12,6 +13,7 @@ function Post({ name, message, email, postImage, image, timestamp }) {
             height={40}
             alt="post"
           />
+
           <div>
             <p className="font-medium"> {name}</p>
             <p className="text-xs text-gray-400">
@@ -21,6 +23,7 @@ function Post({ name, message, email, postImage, image, timestamp }) {
         </div>
         <p className="pt-4">{message}</p>
       </div>
+
       {postImage && (
         <div className="relative h-56 bg-white md:h-96">
           <Image
@@ -31,6 +34,22 @@ function Post({ name, message, email, postImage, image, timestamp }) {
           />
         </div>
       )}
+
+      {/* Footer of Posts */}
+      <div className="flex items-center justify-between text-gray-600 bg-white border-t shadow-md rounded-b-2xl">
+        <div className="rounded-none inputIcon rounded-bl-2xl" >
+        <ThumbUpIcon className="h-4"/>
+            <p className="text-xs sm:text-base">좋아요</p>
+        </div>
+        <div className="rounded-none inputIcon ">
+        <ChatAltIcon className="h-4"/>
+            <p className="text-xs sm:text-base">댓글 달기</p>
+        </div>
+        <div className="rounded-none inputIcon rounded-br-2xl">
+            <ShareIcon className="h-4"/>
+            <p className="text-xs sm:text-base">공유하기</p>
+        </div>
+      </div>
     </div>
   );
 }
