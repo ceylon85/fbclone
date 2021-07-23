@@ -8,7 +8,7 @@ import Widgets from "../components/Widgets";
 import { db } from "../firebase";
 
 export default function Home({ session, posts }) {
-  // if (!session) return <Login />;
+  if (!session) return <Login />;
 
   return (
     <div className="h-screen overflow-hidden bg-gray-100">
