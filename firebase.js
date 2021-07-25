@@ -7,7 +7,7 @@ const firebaseConfig = {
   projectId: "facebook-clone-8cb2b",
   storageBucket: "facebook-clone-8cb2b.appspot.com",
   messagingSenderId: "473209989513",
-  appId: "1:473209989513:web:431c94ffeabb725813d958",
+  appId: "1:473209989513:web:431c94ffeabb725813d958"
 };
 
 const app = !firebase.apps.length
@@ -17,4 +17,8 @@ const app = !firebase.apps.length
 const db = app.firestore();
 const storage = firebase.storage();
 
-export { db, storage };
+//facebook auth
+//https://facebook-clone-8cb2b.firebaseapp.com/__/auth/handler
+const auth = app.auth();
+
+export { db, storage, auth };
