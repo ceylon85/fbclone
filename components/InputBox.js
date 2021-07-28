@@ -20,9 +20,9 @@ function InputBox() {
     db.collection("posts")
       .add({
         message: inputRef.current.value,
-        name: session.user.name,
+        //name: session.user.name,
         email: session.user.email,
-        image: session.user.image,
+        //image: session.user.image,
         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       })
       .then((doc) => {
@@ -77,7 +77,8 @@ function InputBox() {
       <div className="flex items-center p-4 space-x-4">
         <Image
           className="rounded-full"
-          src={session.user.image}
+          //src={session.user.image}
+          src= "https://links.papareact.com/f0p"
           width={40}
           height={40}
           layout="fixed"
@@ -88,7 +89,8 @@ function InputBox() {
             className="flex-grow h-12 px-5 bg-gray-100 rounded-full focus:outline-none"
             type="text"
             ref={inputRef}
-            placeholder={`${session.user.name}님, 무슨 생각을 하고 계신가요?`}
+            //placeholder={`${session.user.name}님, 무슨 생각을 하고 계신가요?`}
+            placeholder={`승준님, 무슨 생각을 하고 계신가요?`}
           />
           <button hidden type="submit" onClick={sendPost}>
             Submit

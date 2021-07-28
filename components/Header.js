@@ -18,7 +18,7 @@ import HeaderIcon from "./HeaderIcon";
 import { signOut, useSession } from "next-auth/client";
 
 function Header() {
-  const [session] = useSession();
+  //const [session] = useSession();
   return (
     <div className="sticky top-0 z-50 flex items-center p-2 bg-white shadow-md lg:px-5">
       {/* Left */}
@@ -56,14 +56,16 @@ function Header() {
         <Image
           onClick={signOut}
           className="rounded-full cursor-pointer"
-          src={session.user.image}
+          //src={session.user.image}
+          src="https://links.papareact.com/xql"
           width="40"
           height="40"
           layout="fixed"
           alt="logout_img"
         />
 
-        <p className="pr-3 font-semibold whitespace-nowrap">{session.user.name}</p>
+        {/* <p className="pr-3 font-semibold whitespace-nowrap">{session.user.name}</p> */}
+        <p className="pr-3 font-semibold whitespace-nowrap">Jun</p>
         <ViewGridIcon className="icon" />
         <ChatIcon className="icon" />
         <BellIcon className="icon" />

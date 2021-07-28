@@ -8,15 +8,16 @@ function Post({ name, message, email, postImage, image, timestamp }) {
         <div className="flex items-center space-x-2">
           <img
             className="rounded-full"
-            src={image}
+            //src={image}
+            src= "https://links.papareact.com/f0p"
             width={40}
             height={40}
             alt="post"
           />
 
           <div>
-            <p className="font-medium"> {name}</p>
-
+            {/* <p className="font-medium"> {name}</p> */}
+            <p className="font-medium"> 승준</p>
             {timestamp ? (
               <p className="text-xs text-gray-400">
                 {new Date(timestamp?.toDate()).toLocaleString()}

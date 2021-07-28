@@ -17,7 +17,7 @@ function Sidebar() {
   const [session, loading] = useSession();
   return (
     <div className="p-2 mt-5 max-w-[600px] xl:min-w-[300px]">
-      <SidebarRow src={session.user.image} title={session.user.name} />
+      {/* <SidebarRow src={session.user.image} title={session.user.name} /> */}
       <SidebarRow Icon={UsersIcon} title="친구 찾기" />
       <SidebarRow Icon={UserGroupIcon} title="그룹" />
       <SidebarRow Icon={DesktopComputerIcon} title="Watch" />

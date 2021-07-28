@@ -1,14 +1,14 @@
 import { getSession } from "next-auth/client";
 import Head from "next/head";
 import Header from "../components/Header";
-import Login from "../components/Login";
+//import Login from "../components/Login";
 import Sidebar from "../components/Sidebar";
 import Feed from "../components/Feed";
 import Widgets from "../components/Widgets";
 import { db } from "../firebase";
 
 export default function Home({ session, posts }) {
-  if (!session) return <Login />;
+  //if (!session) return <Login />;
 
   return (
     <div className="h-screen overflow-hidden bg-gray-100">
